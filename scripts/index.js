@@ -33,8 +33,10 @@ function displayTeam() {
   const selectCode = footballTeamList.value;
   for(const team of teams) {
     if(team.code == selectCode) {
-        showTeam.innerText = team.name;
-        valueOfTeam.innerText = team.code;
+        showTeam.innerText = `You selected ${team.name} (${team.code}) who play in ${team.plays}`
+        
+    } else if(selectCode == "") {
+        showTeam.innerText = "Nothing selected"
     }
   }
 
